@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		635EBE37298FAA540044A179 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EBE36298FAA540044A179 /* SearchCell.swift */; };
+		635EBE39298FBEBC0044A179 /* SearchApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635EBE38298FBEBC0044A179 /* SearchApiRequest.swift */; };
+		6378F59D29780C340028EC18 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378F59C29780C340028EC18 /* Repo.swift */; };
+		6378F59F297810A40028EC18 /* trendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6378F59E297810A40028EC18 /* trendingRepoCell.swift */; };
+		63B3C070297FD9DE00DCDCC5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3C06F297FD9DE00DCDCC5 /* Constants.swift */; };
+		63B3C073297FE10E00DCDCC5 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3C072297FE10E00DCDCC5 /* ApiConfig.swift */; };
+		63B3C075297FE3FA00DCDCC5 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3C074297FE3FA00DCDCC5 /* ApiService.swift */; };
+		63B3C078298151BF00DCDCC5 /* TrendingNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3C077298151BF00DCDCC5 /* TrendingNetworking.swift */; };
+		63B3C07A2981574900DCDCC5 /* TrendingApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3C0792981574900DCDCC5 /* TrendingApiRequest.swift */; };
+		63D5ACB12970080200C88DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5ACB02970080200C88DBE /* AppDelegate.swift */; };
+		63D5ACB32970080200C88DBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5ACB22970080200C88DBE /* SceneDelegate.swift */; };
+		63D5ACB52970080200C88DBE /* TrendingFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5ACB42970080200C88DBE /* TrendingFeedVC.swift */; };
+		63D5ACB82970080200C88DBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D5ACB62970080200C88DBE /* Main.storyboard */; };
+		63D5ACBA2970080600C88DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D5ACB92970080600C88DBE /* Assets.xcassets */; };
+		63D5ACBD2970080600C88DBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D5ACBB2970080600C88DBE /* LaunchScreen.storyboard */; };
+		63D5ACC82970149600C88DBE /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5ACC72970149600C88DBE /* SearchVC.swift */; };
+		63D5ACCA29704FE600C88DBE /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5ACC929704FE600C88DBE /* Extenstions.swift */; };
+		DDDEED9BD4572584EA3EB72E /* Pods_Versi_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80F0A1B93290375D74445E70 /* Pods_Versi_app.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		35BCCB496864BC6ED93920D8 /* Pods-Versi-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Versi-app.release.xcconfig"; path = "Target Support Files/Pods-Versi-app/Pods-Versi-app.release.xcconfig"; sourceTree = "<group>"; };
+		635EBE36298FAA540044A179 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		635EBE38298FBEBC0044A179 /* SearchApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchApiRequest.swift; sourceTree = "<group>"; };
+		6378F59C29780C340028EC18 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		6378F59E297810A40028EC18 /* trendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trendingRepoCell.swift; sourceTree = "<group>"; };
+		63B3C06F297FD9DE00DCDCC5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		63B3C072297FE10E00DCDCC5 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		63B3C074297FE3FA00DCDCC5 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		63B3C077298151BF00DCDCC5 /* TrendingNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingNetworking.swift; sourceTree = "<group>"; };
+		63B3C0792981574900DCDCC5 /* TrendingApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingApiRequest.swift; sourceTree = "<group>"; };
+		63D5ACAD2970080200C88DBE /* Versi-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Versi-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D5ACB02970080200C88DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63D5ACB22970080200C88DBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		63D5ACB42970080200C88DBE /* TrendingFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingFeedVC.swift; sourceTree = "<group>"; };
+		63D5ACB72970080200C88DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63D5ACB92970080600C88DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63D5ACBC2970080600C88DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63D5ACBE2970080600C88DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63D5ACC72970149600C88DBE /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		63D5ACC929704FE600C88DBE /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		80F0A1B93290375D74445E70 /* Pods_Versi_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Versi_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2EFD982D7038F47F26296B /* Pods-Versi-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Versi-app.debug.xcconfig"; path = "Target Support Files/Pods-Versi-app/Pods-Versi-app.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63D5ACAA2970080200C88DBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDEED9BD4572584EA3EB72E /* Pods_Versi_app.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		635AF44B2987EC150008FE89 /* CommonApi */ = {
+			isa = PBXGroup;
+			children = (
+				63B3C072297FE10E00DCDCC5 /* ApiConfig.swift */,
+				63B3C074297FE3FA00DCDCC5 /* ApiService.swift */,
+			);
+			path = CommonApi;
+			sourceTree = "<group>";
+		};
+		63B3C06E297FD9AD00DCDCC5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				63B3C06F297FD9DE00DCDCC5 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		63B3C071297FE0D200DCDCC5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				635AF44B2987EC150008FE89 /* CommonApi */,
+				63B3C076298151A200DCDCC5 /* Trending */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		63B3C076298151A200DCDCC5 /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				63B3C077298151BF00DCDCC5 /* TrendingNetworking.swift */,
+				63B3C0792981574900DCDCC5 /* TrendingApiRequest.swift */,
+				635EBE38298FBEBC0044A179 /* SearchApiRequest.swift */,
+			);
+			path = Trending;
+			sourceTree = "<group>";
+		};
+		63D5ACA42970080200C88DBE = {
+			isa = PBXGroup;
+			children = (
+				63D5ACAF2970080200C88DBE /* Versi-app */,
+				63D5ACAE2970080200C88DBE /* Products */,
+				C120A6DA41D4B2F6C39DF9C4 /* Pods */,
+				88033506C06D39C46E72B503 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63D5ACAE2970080200C88DBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63D5ACAD2970080200C88DBE /* Versi-app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63D5ACAF2970080200C88DBE /* Versi-app */ = {
+			isa = PBXGroup;
+			children = (
+				63B3C06E297FD9AD00DCDCC5 /* Utilities */,
+				63D5ACB02970080200C88DBE /* AppDelegate.swift */,
+				63D5ACB92970080600C88DBE /* Assets.xcassets */,
+				63D5ACC52970092400C88DBE /* Controller */,
+				63D5ACC62970093200C88DBE /* Model */,
+				63D5ACC42970090900C88DBE /* View */,
+				63D5ACBE2970080600C88DBE /* Info.plist */,
+				63D5ACBB2970080600C88DBE /* LaunchScreen.storyboard */,
+				63D5ACB62970080200C88DBE /* Main.storyboard */,
+				63D5ACB22970080200C88DBE /* SceneDelegate.swift */,
+			);
+			path = "Versi-app";
+			sourceTree = "<group>";
+		};
+		63D5ACC42970090900C88DBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63D5ACC929704FE600C88DBE /* Extenstions.swift */,
+				6378F59E297810A40028EC18 /* trendingRepoCell.swift */,
+				635EBE36298FAA540044A179 /* SearchCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63D5ACC52970092400C88DBE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63D5ACB42970080200C88DBE /* TrendingFeedVC.swift */,
+				63D5ACC72970149600C88DBE /* SearchVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63D5ACC62970093200C88DBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63B3C071297FE0D200DCDCC5 /* Networking */,
+				6378F59C29780C340028EC18 /* Repo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88033506C06D39C46E72B503 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80F0A1B93290375D74445E70 /* Pods_Versi_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C120A6DA41D4B2F6C39DF9C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF2EFD982D7038F47F26296B /* Pods-Versi-app.debug.xcconfig */,
+				35BCCB496864BC6ED93920D8 /* Pods-Versi-app.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63D5ACAC2970080200C88DBE /* Versi-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63D5ACC12970080600C88DBE /* Build configuration list for PBXNativeTarget "Versi-app" */;
+			buildPhases = (
+				2FDB75B8FB3DC1C7061E4F43 /* [CP] Check Pods Manifest.lock */,
+				63D5ACA92970080200C88DBE /* Sources */,
+				63D5ACAA2970080200C88DBE /* Frameworks */,
+				63D5ACAB2970080200C88DBE /* Resources */,
+				A66F1CEADE01130CE07C1967 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Versi-app";
+			productName = "Versi-app";
+			productReference = 63D5ACAD2970080200C88DBE /* Versi-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63D5ACA52970080200C88DBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					63D5ACAC2970080200C88DBE = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 63D5ACA82970080200C88DBE /* Build configuration list for PBXProject "Versi-app" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63D5ACA42970080200C88DBE;
+			productRefGroup = 63D5ACAE2970080200C88DBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63D5ACAC2970080200C88DBE /* Versi-app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63D5ACAB2970080200C88DBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D5ACBD2970080600C88DBE /* LaunchScreen.storyboard in Resources */,
+				63D5ACBA2970080600C88DBE /* Assets.xcassets in Resources */,
+				63D5ACB82970080200C88DBE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FDB75B8FB3DC1C7061E4F43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Versi-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A66F1CEADE01130CE07C1967 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Versi-app/Pods-Versi-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Versi-app/Pods-Versi-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Versi-app/Pods-Versi-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63D5ACA92970080200C88DBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				635EBE37298FAA540044A179 /* SearchCell.swift in Sources */,
+				6378F59F297810A40028EC18 /* trendingRepoCell.swift in Sources */,
+				63D5ACC82970149600C88DBE /* SearchVC.swift in Sources */,
+				63D5ACB52970080200C88DBE /* TrendingFeedVC.swift in Sources */,
+				635EBE39298FBEBC0044A179 /* SearchApiRequest.swift in Sources */,
+				63B3C078298151BF00DCDCC5 /* TrendingNetworking.swift in Sources */,
+				63D5ACB12970080200C88DBE /* AppDelegate.swift in Sources */,
+				6378F59D29780C340028EC18 /* Repo.swift in Sources */,
+				63D5ACCA29704FE600C88DBE /* Extenstions.swift in Sources */,
+				63B3C075297FE3FA00DCDCC5 /* ApiService.swift in Sources */,
+				63D5ACB32970080200C88DBE /* SceneDelegate.swift in Sources */,
+				63B3C07A2981574900DCDCC5 /* TrendingApiRequest.swift in Sources */,
+				63B3C070297FD9DE00DCDCC5 /* Constants.swift in Sources */,
+				63B3C073297FE10E00DCDCC5 /* ApiConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63D5ACB62970080200C88DBE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63D5ACB72970080200C88DBE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63D5ACBB2970080600C88DBE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63D5ACBC2970080600C88DBE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63D5ACBF2970080600C88DBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63D5ACC02970080600C88DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63D5ACC22970080600C88DBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF2EFD982D7038F47F26296B /* Pods-Versi-app.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DBEWXCHQCM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Versi-app/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appital.classfit.Versi-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		63D5ACC32970080600C88DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35BCCB496864BC6ED93920D8 /* Pods-Versi-app.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DBEWXCHQCM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Versi-app/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appital.classfit.Versi-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63D5ACA82970080200C88DBE /* Build configuration list for PBXProject "Versi-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D5ACBF2970080600C88DBE /* Debug */,
+				63D5ACC02970080600C88DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63D5ACC12970080600C88DBE /* Build configuration list for PBXNativeTarget "Versi-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D5ACC22970080600C88DBE /* Debug */,
+				63D5ACC32970080600C88DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63D5ACA52970080200C88DBE /* Project object */;
+}
