@@ -14,7 +14,7 @@ import Alamofire
 
 protocol TrendingApiRequestProtocol {
     
-  
+    
     func getTrending(completion : @escaping ([RepoData]) -> Void)
 }
 
@@ -23,13 +23,14 @@ class TrendingApiRequest : ApiService<TrendingNetworking> , TrendingApiRequestPr
     
     
     
+    
     private func getTrendingData (completion : @escaping (_ repoItemsArray : [RepoItems] ) -> ()) {
-       
+        
         self.fetchData(apiTarget: .getTrending, apiModel: RepoModule.self) { response,error  in
-           
+            
             if error != nil {
                 
-               print("error in return data",error)
+                print("error in return data",error)
                 
             }else {
                 
@@ -38,20 +39,20 @@ class TrendingApiRequest : ApiService<TrendingNetworking> , TrendingApiRequestPr
                 for repoItem in response!.items! {
                     
                     if repoItemsArray.count <= 9 {
-                    
-                    guard let name = repoItem.name ,
-                          let description = repoItem.description,
-                          let numberOfForks = repoItem.numberOfForks ,
-                          let language = repoItem.language ,
-                          let contributorsUrl = repoItem.contributorsUrl ,
-                          let repoUrl = repoItem.repoUrl,
-                          let owner = repoItem.owner,
-                          let avatarUrl = owner.avatarUrl   else { continue }
-                    
+                        
+                        guard let name = repoItem.name ,
+                              let description = repoItem.description,
+                              let numberOfForks = repoItem.numberOfForks ,
+                              let language = repoItem.language ,
+                              let contributorsUrl = repoItem.contributorsUrl ,
+                              let repoUrl = repoItem.repoUrl,
+                              let owner = repoItem.owner,
+                              let avatarUrl = owner.avatarUrl   else { continue }
+                        
                         let repoNewItem : RepoItems =  RepoItems(owner: owner, name: name, description: description, numberOfForks: numberOfForks, language: language, contributorsUrl: contributorsUrl, repoUrl: repoUrl)
                         
                         repoItemsArray.append(repoNewItem)
-                    
+                        
                     }else {
                         
                         break
@@ -60,88 +61,89 @@ class TrendingApiRequest : ApiService<TrendingNetworking> , TrendingApiRequestPr
                 }
                 completion(repoItemsArray)
             }
-        
+            
         }
     }
     
     
     func getTrending(completion : @escaping ([RepoData]) -> Void) {
         
-       var repoDataArray = [RepoData]()
+      
         
         getTrendingData { repoItemsArray in
             
-            for repoItem in repoItemsArray {
-               
-                self.returnRepoDataItem(repoItem: repoItem) { repoDataItem in
-                   
-                    if repoDataArray.count < 9 {
+            self.fetchContrNumAndImag(repoArray: repoItemsArray) { repoList in
+                
+                
+                // sort repo by number of forks
+                let sortedArray = repoList.sorted { (repo1, repo2) -> Bool in
+                    
+                    if repo1.numberOfForks! > repo2.numberOfForks! {
                         
-                        repoDataArray.append(repoDataItem)
+                        return true
                         
                     }else {
-                       // sort repo by number of forks
-                        let sortedArray = repoDataArray.sorted { (repo1, repo2) -> Bool in
-
-                            if repo1.numberOfForks! > repo2.numberOfForks! {
-
-                                return true
-
-                            }else {
-
-                                return false
-                            }
-                        }
-                        completion(sortedArray)
+                        
+                        return false
                     }
+                }
+                
+                completion(sortedArray)
+                
+            }
+        
+        }
+        
+    }
+    
+
+    
+    private func fetchContrNumAndImag(repoArray : [RepoItems] , completion : @escaping ([RepoData]) -> () ) {
+        
+        var finalRepoList = [RepoData]()
+        var group = DispatchGroup()
+        
+        for repo in repoArray {
+            
+            let newItem : RepoData = RepoData( name: repo.name!, description: repo.description!, numberOfForks: repo.numberOfForks!, language: repo.language!, repoUrl: repo.repoUrl!)
+            
+            group.enter()
+            
+            // fetch image url
+            Alamofire.request(repo.owner!.avatarUrl!).responseImage { response in
+                
+                guard let image = response.result.value else {return}
+                
+                newItem.repoImage = image
+                
+                group.leave()
+                
+                
+            }
+            
+            group.enter()
+            // fetch contrib num
+            Alamofire.request(repo.contributorsUrl!).responseJSON { response in
+                
+                guard let json = response.result.value as? [Dictionary<String,Any>] else {return}
+                
+                if !json.isEmpty {
+                    
+                    newItem.numOfContributors = json.count
+                    
+                    group.leave()
                 }
             }
             
-           
-        }
-
-    }
-    
-    
-    func returnRepoDataItem(repoItem : RepoItems , completion : @escaping (_ repoDataItem : RepoData) -> ()) {
-        
- 
-        self.downloadImage(imageUrl: repoItem.owner!.avatarUrl!) { image in
- 
-            self.downloadContributorsNumb(contributorUrl: repoItem.contributorsUrl!) { contributorsNum in
- 
- 
-                let newItem : RepoData = RepoData(repoImage: image, name: repoItem.name!, description: repoItem.description!, numberOfForks: repoItem.numberOfForks!, language: repoItem.language!, numOfContributors: contributorsNum, repoUrl: repoItem.repoUrl!)
-                             
-                completion(newItem)
- 
-                             }
-                         }
-    }
-    
-    
-    private func downloadImage(imageUrl : String , completion : @escaping (_ image : UIImage)-> ()){
-        
-        Alamofire.request(imageUrl).responseImage { imageResponse in
             
-            guard let image = imageResponse.result.value else {return}
+            finalRepoList.append(newItem)
             
-            completion(image)
         }
         
-    }
-    
-    
-    private func downloadContributorsNumb(contributorUrl : String , completion : @escaping (_ contributorsNum : Int) -> ()) {
         
-        Alamofire.request(contributorUrl).responseJSON { response in
-            
-            guard let json = response.result.value as? [Dictionary<String,Any>] else {return}
-            
-            if !json.isEmpty {
-                
-                completion(json.count)
-            }
+        group.notify(queue: .main) {
+            completion(finalRepoList)
         }
+        
     }
 }

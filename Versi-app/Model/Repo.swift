@@ -76,7 +76,7 @@ class RepoData {
     var numOfContributors : Int?
     var repoUrl : String?
   
-   init(repoImage : UIImage , name : String,description : String ,numberOfForks : Int , language : String , numOfContributors : Int , repoUrl : String){
+   init(repoImage : UIImage? = nil , name : String,description : String ,numberOfForks : Int , language : String , numOfContributors : Int? = nil , repoUrl : String){
 
        self.repoImage = repoImage
        self.name = name
